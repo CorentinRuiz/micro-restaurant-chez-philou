@@ -1,4 +1,4 @@
-import { IsMongoId, IsNotEmpty, IsPositive } from 'class-validator';
+import { IsMongoId, IsNotEmpty, IsOptional, IsPositive } from 'class-validator';
 
 export class AddMenuItemDto {
   @IsMongoId()
@@ -10,4 +10,7 @@ export class AddMenuItemDto {
   @IsNotEmpty()
   @IsPositive()
   howMany: number;
+
+  @IsOptional()
+  comment: string;
 }

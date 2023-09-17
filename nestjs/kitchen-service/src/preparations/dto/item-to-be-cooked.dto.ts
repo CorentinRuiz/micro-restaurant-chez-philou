@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsPositive } from 'class-validator';
+import { IsNotEmpty, IsPositive, IsOptional } from 'class-validator';
 
 export class ItemToBeCookedDto {
   @IsNotEmpty()
@@ -7,4 +7,7 @@ export class ItemToBeCookedDto {
   @IsNotEmpty()
   @IsPositive()
   howMany: number;
+
+  @IsOptional()
+  comment: string;
 }
